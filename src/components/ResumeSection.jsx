@@ -14,7 +14,7 @@ const fadeUp = (delay = 0) => ({
   },
 });
 
-const RESUME_URL = '/Resume_Anshu_Trivedi.pdf';
+const RESUME_URL = `${import.meta.env.BASE_URL}Resume_Anshu_Trivedi.pdf`;
 
 const ResumeSection = () => {
   return (

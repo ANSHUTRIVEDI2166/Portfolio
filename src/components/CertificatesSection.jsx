@@ -21,6 +21,8 @@ const fadeUp = (delay = 0) => ({
   },
 });
 
+const BASE = import.meta.env.BASE_URL;
+
 const certificates = [
   {
     id: 'dbms-nptel',
@@ -28,7 +30,7 @@ const certificates = [
     issuer: 'NPTEL (National Programme on Technology Enhanced Learning)',
     icon: FaDatabase,
     accentColor: '#F59E0B',
-    file: '/certificates/Data_Base_Management_System.pdf',
+    file: `${BASE}certificates/Data_Base_Management_System.pdf`,
   },
   {
     id: 'dsa-java-nptel',
@@ -36,7 +38,7 @@ const certificates = [
     issuer: 'NPTEL (National Programme on Technology Enhanced Learning)',
     icon: FaJava,
     accentColor: '#EC4899',
-    file: '/certificates/Data_Structure_and_Algorithms_using_Java.pdf',
+    file: `${BASE}certificates/Data_Structure_and_Algorithms_using_Java.pdf`,
   },
   {
     id: 'aws-cloud',
@@ -44,7 +46,7 @@ const certificates = [
     issuer: 'Amazon Web Services (AWS Academy)',
     icon: FaAws,
     accentColor: '#FF9900',
-    file: '/certificates/AWS_Academy_Graduate___Cloud_Developing___Training_Badge_Badge20260401-31-9alwp0.pdf',
+    file: `${BASE}certificates/AWS_Academy_Graduate___Cloud_Developing___Training_Badge_Badge20260401-31-9alwp0.pdf`,
   },
   {
     id: 'dl-nvidia',
@@ -52,7 +54,7 @@ const certificates = [
     issuer: 'NVIDIA Deep Learning Institute',
     icon: SiNvidia,
     accentColor: '#76B900',
-    file: '/certificates/Getting_started_with_DL_nvidia.pdf',
+    file: `${BASE}certificates/Getting_started_with_DL_nvidia.pdf`,
   },
   {
     id: 'jetson-nvidia',
@@ -60,7 +62,7 @@ const certificates = [
     issuer: 'NVIDIA Deep Learning Institute',
     icon: SiNvidia,
     accentColor: '#76B900',
-    file: '/certificates/Jetsonnano_nvidia.PDF',
+    file: `${BASE}certificates/Jetsonnano_nvidia.PDF`,
   },
   {
     id: 'cuda-nvidia',
@@ -68,7 +70,7 @@ const certificates = [
     issuer: 'NVIDIA Deep Learning Institute',
     icon: SiNvidia,
     accentColor: '#76B900',
-    file: '/certificates/cuda_python_nvidia.pdf',
+    file: `${BASE}certificates/cuda_python_nvidia.pdf`,
   },
   {
     id: 'ml-ibm',
@@ -76,7 +78,7 @@ const certificates = [
     issuer: 'IBM',
     icon: TbBrain,
     accentColor: '#0062FF',
-    file: '/certificates/Ml_with_python_IBM.pdf',
+    file: `${BASE}certificates/Ml_with_python_IBM.pdf`,
   },
   {
     id: 'ai-ds-samatrix',
@@ -84,7 +86,7 @@ const certificates = [
     issuer: 'Samatrix.io',
     icon: TbBrain,
     accentColor: '#EC4899',
-    file: '/certificates/foundation to ai data science and data analytics by samatrix.pdf',
+    file: `${BASE}certificates/foundation to ai data science and data analytics by samatrix.pdf`,
   },
   {
     id: 'prob-samatrix',
@@ -92,7 +94,7 @@ const certificates = [
     issuer: 'Samatrix.io',
     icon: SiPython,
     accentColor: '#3776AB',
-    file: '/certificates/probablity modelling using python by samatrix.pdf',
+    file: `${BASE}certificates/probablity modelling using python by samatrix.pdf`,
   },
 ];
 
