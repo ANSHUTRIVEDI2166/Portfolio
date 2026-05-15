@@ -94,12 +94,11 @@ const Navbar = () => {
 
         {/* Desktop Nav */}
         <nav
+          className="desktop-nav"
           style={{
-            display: 'flex',
             alignItems: 'center',
             gap: '6px',
           }}
-          className="desktop-nav"
         >
           {navItems.map(({ id, label, icon: Icon, to }) => {
             const isActive = location.pathname === to;
@@ -138,7 +137,6 @@ const Navbar = () => {
           className="mobile-menu-btn"
           aria-label="Toggle menu"
           style={{
-            display: 'none',
             background: 'none',
             border: 'none',
             color: 'var(--color-text-primary)',

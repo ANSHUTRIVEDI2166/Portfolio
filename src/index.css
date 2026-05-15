@@ -246,6 +246,14 @@ body {
 }
 
 /* ── Responsive Navbar ── */
+.desktop-nav {
+  display: flex;
+}
+
+.mobile-menu-btn {
+  display: none;
+}
+
 @media (max-width: 900px) {
   .desktop-nav {
     display: none !important;
