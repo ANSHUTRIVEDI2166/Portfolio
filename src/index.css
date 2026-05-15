@@ -263,6 +263,19 @@ body {
   }
 }
 
+/* ── Tech Stack grid ── */
+@media (max-width: 768px) {
+  .tech-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .tech-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
 /* ── Research card ── */
 .research-card:hover {
   border-color: rgba(0, 212, 255, 0.2) !important;

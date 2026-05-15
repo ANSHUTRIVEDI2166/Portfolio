@@ -205,6 +205,7 @@ const TechStackSection = () => {
         </motion.p>
 
         <div
+          className="tech-grid"
           style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(4, 1fr)',
@@ -236,6 +237,7 @@ const TechStackSection = () => {
         </motion.p>
 
         <div
+          className="tech-grid"
           style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(4, 1fr)',

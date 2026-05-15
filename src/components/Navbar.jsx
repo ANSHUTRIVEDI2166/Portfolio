@@ -60,11 +60,12 @@ const Navbar = () => {
           left: 0,
           right: 0,
           zIndex: 1000,
-          padding: '0 32px',
+          padding: '0 clamp(16px, 4vw, 32px)',
           height: '70px',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
+          overflow: 'hidden',
           backdropFilter: scrolled ? 'blur(16px) saturate(180%)' : 'blur(8px)',
           WebkitBackdropFilter: scrolled ? 'blur(16px) saturate(180%)' : 'blur(8px)',
           backgroundColor: scrolled
@@ -143,6 +144,7 @@ const Navbar = () => {
             fontSize: '1.7rem',
             cursor: 'pointer',
             padding: '4px',
+            flexShrink: 0,
           }}
         >
           {mobileOpen ? <HiOutlineX /> : <HiOutlineMenuAlt3 />}
