@@ -1,0 +1,336 @@
+@import "tailwindcss";
+
+/* ── Design Tokens ── */
+@theme {
+  --color-bg-primary: #0a0a0f;
+  --color-bg-secondary: #111118;
+  --color-bg-card: #16161f;
+  --color-text-primary: #f0f0f5;
+  --color-text-secondary: #a0a0b8;
+  --color-text-muted: #6b6b80;
+  --color-accent-cyan: #00d4ff;
+  --color-accent-purple: #7c3aed;
+  --color-accent-pink: #ec4899;
+  --color-accent-blue: #3b82f6;
+  --color-glow-cyan: rgba(0, 212, 255, 0.4);
+  --color-glow-purple: rgba(124, 58, 237, 0.4);
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+/* ── Global Reset ── */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+::selection {
+  background-color: rgba(124, 58, 237, 0.3);
+  color: #fff;
+}
+
+/* ── Gradient Text ── */
+.gradient-text {
+  background: linear-gradient(
+    135deg,
+    var(--color-accent-cyan) 0%,
+    var(--color-accent-purple) 50%,
+    var(--color-accent-pink) 100%
+  );
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-shift 4s ease infinite;
+}
+
+@keyframes gradient-shift {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* ── Typing cursor ── */
+.typing-cursor {
+  display: inline-block;
+  width: 3px;
+  height: 1em;
+  background-color: var(--color-accent-cyan);
+  margin-left: 4px;
+  animation: blink 1s step-end infinite;
+  vertical-align: text-bottom;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* ── Particle canvas ── */
+#particles-canvas {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* ── Social icon glow ── */
+.social-icon {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--color-text-secondary);
+  font-size: 1.25rem;
+  transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+}
+
+.social-icon::after {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  z-index: -1;
+}
+
+.social-icon:hover {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-4px) scale(1.08);
+}
+
+.social-icon.github:hover {
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2), 0 0 40px rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.social-icon.linkedin:hover {
+  box-shadow: 0 0 20px rgba(0, 119, 181, 0.4), 0 0 40px rgba(0, 119, 181, 0.2);
+  border-color: rgba(0, 119, 181, 0.6);
+  color: #0077B5;
+}
+
+.social-icon.scholar:hover {
+  box-shadow: 0 0 20px rgba(66, 133, 244, 0.4), 0 0 40px rgba(66, 133, 244, 0.2);
+  border-color: rgba(66, 133, 244, 0.6);
+  color: #4285F4;
+}
+
+.social-icon.email:hover {
+  box-shadow: 0 0 20px rgba(234, 67, 53, 0.4), 0 0 40px rgba(234, 67, 53, 0.2);
+  border-color: rgba(234, 67, 53, 0.6);
+  color: #EA4335;
+}
+
+.social-icon.orcid:hover {
+  box-shadow: 0 0 20px rgba(166, 206, 57, 0.4), 0 0 40px rgba(166, 206, 57, 0.2);
+  border-color: rgba(166, 206, 57, 0.6);
+  color: #A6CE39;
+}
+
+/* ── Mesh gradient orbs ── */
+.mesh-gradient {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.mesh-gradient.orb-1 {
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, var(--color-accent-purple), transparent 70%);
+  top: -10%;
+  right: -5%;
+  animation: float-orb-1 18s ease-in-out infinite;
+}
+
+.mesh-gradient.orb-2 {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, var(--color-accent-cyan), transparent 70%);
+  bottom: -10%;
+  left: -5%;
+  animation: float-orb-2 22s ease-in-out infinite;
+}
+
+.mesh-gradient.orb-3 {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, var(--color-accent-pink), transparent 70%);
+  top: 40%;
+  left: 30%;
+  animation: float-orb-3 15s ease-in-out infinite;
+}
+
+@keyframes float-orb-1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(-40px, 60px) scale(1.1); }
+  66% { transform: translate(30px, -40px) scale(0.95); }
+}
+
+@keyframes float-orb-2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(50px, -30px) scale(1.05); }
+  66% { transform: translate(-30px, 50px) scale(1.1); }
+}
+
+@keyframes float-orb-3 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(-60px, -40px) scale(1.15); }
+  66% { transform: translate(40px, 30px) scale(0.9); }
+}
+
+/* ── Responsive breakpoints ── */
+@media (max-width: 768px) {
+  .social-icon {
+    width: 44px;
+    height: 44px;
+    font-size: 1.1rem;
+  }
+}
+
+.social-icon.leetcode:hover {
+  color: #FFA116;
+  box-shadow: 0 0 20px rgba(255, 161, 22, 0.4);
+  border-color: rgba(255, 161, 22, 0.4);
+}
+
+.social-icon.codeforces:hover {
+  color: #1890FF;
+  box-shadow: 0 0 20px rgba(24, 144, 255, 0.4);
+  border-color: rgba(24, 144, 255, 0.4);
+}
+
+/* ── Navbar links ── */
+.nav-link:hover {
+  color: var(--color-text-primary) !important;
+  background-color: rgba(255, 255, 255, 0.06) !important;
+}
+
+.nav-link:active {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* ── Responsive Navbar ── */
+@media (max-width: 900px) {
+  .desktop-nav {
+    display: none !important;
+  }
+  .mobile-menu-btn {
+    display: flex !important;
+  }
+}
+
+/* ── Research card ── */
+.research-card:hover {
+  border-color: rgba(0, 212, 255, 0.2) !important;
+  box-shadow: 0 4px 30px rgba(0, 212, 255, 0.06);
+}
+
+.publication-link:hover {
+  background: rgba(0, 212, 255, 0.08) !important;
+  border-color: rgba(0, 212, 255, 0.5) !important;
+}
+
+/* ── Project cards ── */
+.project-card:hover {
+  border-color: rgba(255, 255, 255, 0.12) !important;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+}
+
+.project-link:hover {
+  color: var(--color-text-primary) !important;
+  border-color: rgba(255, 255, 255, 0.25) !important;
+  background: rgba(255, 255, 255, 0.04) !important;
+}
+
+@media (max-width: 700px) {
+  .projects-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ── Honour cards ── */
+.honour-card:hover {
+  border-color: rgba(255, 255, 255, 0.12) !important;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
+}
+
+/* ── Certificate cards ── */
+.cert-card:hover {
+  border-color: rgba(255, 255, 255, 0.12) !important;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
+}
+
+.cert-btn:hover {
+  color: var(--color-text-primary) !important;
+  border-color: rgba(255, 255, 255, 0.25) !important;
+  background: rgba(255, 255, 255, 0.04) !important;
+}
+
+.cert-download:hover {
+  background: rgba(0, 212, 255, 0.08) !important;
+  border-color: rgba(0, 212, 255, 0.4) !important;
+}
+
+@media (max-width: 900px) {
+  .certs-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 550px) {
+  .certs-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ── Footer ── */
+.footer-link:hover {
+  color: var(--color-text-primary) !important;
+}
+
+.footer-social:hover {
+  color: var(--color-text-primary) !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+@media (max-width: 700px) {
+  .footer-top {
+    flex-direction: column;
+  }
+}
