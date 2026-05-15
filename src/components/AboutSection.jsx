@@ -33,7 +33,7 @@ const AboutSection = () => {
       style={{
         position: 'relative',
         zIndex: 10,
-        padding: '100px 40px 80px',
+        padding: '160px 40px 80px',
       }}
     >
       <div style={{ maxWidth: '900px', margin: '0 auto', width: '100%' }}>

@@ -59,7 +59,7 @@ const Navbar = () => {
           top: 0,
           left: 0,
           right: 0,
-          zIndex: 100,
+          zIndex: 1000,
           padding: '0 32px',
           height: '70px',
           display: 'flex',
@@ -160,7 +160,7 @@ const Navbar = () => {
             style={{
               position: 'fixed',
               inset: 0,
-              zIndex: 99,
+              zIndex: 999,
               backgroundColor: 'rgba(10, 10, 15, 0.95)',
               backdropFilter: 'blur(20px)',
               display: 'flex',
