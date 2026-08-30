@@ -1,8 +1,10 @@
 import { motion } from 'framer-motion';
 import {
   HiOutlineAcademicCap,
+  HiOutlineBriefcase,
   HiOutlineCode,
   HiOutlineLightBulb,
+  HiOutlineTrendingUp,
   HiOutlineUserGroup,
 } from 'react-icons/hi';
 
@@ -21,19 +23,34 @@ const fadeUp = (delay = 0) => ({
 
 const experiences = [
   {
-    id: 'phaze-ai',
-    icon: HiOutlineCode,
+    id: 'ap-techpower',
+    icon: HiOutlineBriefcase,
     accentColor: '#00D4FF',
-    company: 'Phaze AI',
-    location: 'Mumbai, Maharashtra, India · Remote',
+    company: 'AP TECHPOWER · Full-time',
+    location: 'Ahmedabad, Gujarat, India · On-site',
     roles: [
       {
-        title: 'AI Engineer',
-        period: 'May 2025 – Sep 2025 · 5 mos',
+        title: 'Head of Product Engineering',
+        period: 'May 2026 – Present · 4 mos',
       },
     ],
     summary:
-      'Built end-to-end web scraping systems using Selenium and BeautifulSoup, targeting state and national-level eProcurement portals with dynamic content and authentication layers. Designed advanced automation workflows in n8n with webhook triggers, API integrations, conditional logic, and automated retries — eliminating manual intervention for data collection, transformation, and reporting. Integrated pipelines with PostgreSQL, cloud storage, and business tools to streamline lead generation in an agile environment.',
+      'Define and execute overall technology strategy, solution architecture, and product development roadmaps. Lead engineering teams in building scalable AI/GenAI solutions, SaaS platforms, cloud infrastructure, and custom software. Collaborate directly with clients to deliver secure, scalable, and outcome-driven technology solutions.',
+  },
+  {
+    id: 'diya-marketing',
+    icon: HiOutlineTrendingUp,
+    accentColor: '#10B981',
+    company: 'Diya Marketing · Full-time',
+    location: 'Ahmedabad, Gujarat, India · On-site',
+    roles: [
+      {
+        title: 'Digital Transformation Officer',
+        period: 'Jan 2026 – May 2026 · 5 mos',
+      },
+    ],
+    summary:
+      'Led technology and digital innovation initiatives at Diya Marketing, focused on transforming the building materials ecosystem through modern software solutions and process automation.',
   },
   {
     id: 'charusat-coordinator',
@@ -85,6 +102,21 @@ const experiences = [
     ],
     summary:
       'Led the Innovators Club as President, driving the vision, strategy, and execution of all club initiatives. Successfully organised and conducted events including WomenInAIdea, DSA Treasure Hunt, and Git/GitHub workshops for junior students. Managed end-to-end event logistics, mentored club members, and fostered a culture of innovation and hands-on learning across the university.',
+  },
+  {
+    id: 'phaze-ai',
+    icon: HiOutlineCode,
+    accentColor: '#6366F1',
+    company: 'Phaze AI',
+    location: 'Mumbai, Maharashtra, India · Remote',
+    roles: [
+      {
+        title: 'AI Engineer',
+        period: 'May 2025 – Sep 2025 · 5 mos',
+      },
+    ],
+    summary:
+      'Built end-to-end web scraping systems using Selenium and BeautifulSoup, targeting state and national-level eProcurement portals with dynamic content and authentication layers. Designed advanced automation workflows in n8n with webhook triggers, API integrations, conditional logic, and automated retries — eliminating manual intervention for data collection, transformation, and reporting. Integrated pipelines with PostgreSQL, cloud storage, and business tools to streamline lead generation in an agile environment.',
   },
 ];
 
