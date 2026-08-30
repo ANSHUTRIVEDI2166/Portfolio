@@ -25,6 +25,16 @@ const fadeUp = (delay = 0) => ({
 
 const honours = [
   {
+    id: 'n8n-hackathon',
+    icon: HiOutlineTrophy,
+    accentColor: '#F59E0B',
+    title: '2nd Place – n8n Community Hackathon',
+    org: 'n8n Community',
+    date: 'Aug 2026',
+    description:
+      'Secured 2nd place in the n8n Community Hackathon by building an innovative AI-powered automation solution.',
+  },
+  {
     id: 'odoo-hackathon',
     icon: HiOutlineTrophy,
     accentColor: '#F59E0B',
