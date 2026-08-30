@@ -18,6 +18,16 @@ const fadeUp = (delay = 0) => ({
 
 const projects = [
   {
+    id: 'suraksha-saathi',
+    title: 'SurakshaSaathi — AI Financial Scam Protection Platform',
+    period: 'Jun 2026 – Jul 2026',
+    description:
+      'Built a multilingual AI voice agent that engages scammers in live calls, analyzes their conversation in real time, and detects fraud patterns such as OTP, UPI, phishing, and loan scams. Supports English, Hindi, and Gujarati, with automated guardian alerts and a Decoy/Honeypot mode for collecting scam intelligence. The system maintains a dynamic risk score throughout the conversation and stores call evidence for further analysis. It combines LLM reasoning with rule-based fraud detection to identify evolving scam tactics and intervention points.',
+    tech: ['React', 'FastAPI', 'LangGraph', 'OpenAI', 'Twilio', 'n8n', 'Google Sheets'],
+    github: 'https://github.com/ANSHUTRIVEDI2166/SurakshaSaathi.git',
+    accentColor: '#00D4FF',
+  },
+  {
     id: 'acadex',
     title: 'AcadeX — Academic Early Risk Detection & Monitoring Platform',
     period: 'Apr 2026',
